@@ -2,6 +2,25 @@
 
 Cette API Star Wars est basée sur l'architecture RESTful et respecte le modèle de Richardson. Elle fournit des points de terminaison pour récupérer, créer, mettre à jour et supprimer des ressources liées aux films, aux personnes, aux planètes, aux espèces, aux vaisseaux spatiaux et aux véhicules.
 
+## Installation
+
+Suivez les étapes ci-dessous pour installer et exécuter l'API Star Wars sur votre environnement local :
+
+1. Clonez le repository en utilisant la commande suivante :
+`git clone git@github.com:altib1/MDS-APIODM-M1-2023.git`
+
+2. Modifiez le fichier `.env` pour configurer la base de données souhaitée. Ajoutez les informations de connexion appropriées.
+
+3. Exécutez la commande suivante pour installer les dépendances :
+`npm install`
+4. Lancez l'API Star Wars en utilisant la commande suivante :
+`npm start`
+5. Le serveur API sera maintenant accessible localement à l'adresse `http://localhost:5000`.
+
+## Swagger
+
+La spécification Swagger de l'API se trouve dans le fichier `swagger.yml`. Vous pouvez l'utiliser pour explorer et tester les points de terminaison de l'API.
+
 ## Modèle de Richardson
 
 Le modèle de Richardson est un modèle d'architecture REST qui définit un ensemble de principes et de bonnes pratiques pour la conception d'API web. Il est divisé en niveaux, chaque niveau représentant une étape progressive vers une conception RESTful complète.
