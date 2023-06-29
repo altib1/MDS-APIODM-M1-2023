@@ -1,0 +1,699 @@
+openapi: 3.0.0
+info:
+  title: API
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+tags:
+  - name: films
+  - name: people
+  - name: planets
+  - name: species
+  - name: starships
+  - name: vehicles
+paths:
+  /films:
+    get:
+      tags:
+        - films
+      summary: New Request Copy
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - films
+      summary: New Request Copy
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                fields:
+                  title: Random Title
+                  episode_id: Random Episode ID
+                  opening_crawl: Random Opening Crawl
+                  director: Random Director
+                  producer: Random Producer
+                  release_date: '2023-06-28'
+                  characters: []
+                  planets: []
+                  starships: []
+                  vehicles: []
+                  species: []
+                  url: []
+                  created: null
+                  edited: null
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /films/{getFilmId}:
+    get:
+      tags:
+        - films
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: getFilmId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /films/{deleteFilmId}:
+    delete:
+      tags:
+        - films
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: deleteFilmId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /films/{patchFilmId}:
+    patch:
+      tags:
+        - films
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: patchFilmId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                fields:
+                  title: Updated Title
+                  episode_id: Updated Episode ID
+                  opening_crawl: Updated Opening Crawl
+                  director: Updated Director
+                  producer: Updated Producer
+                  release_date: '2023-06-28'
+                  characters: []
+                  planets: []
+                  starships: []
+                  vehicles: []
+                  species: []
+                  url: []
+                  created: null
+                  edited: null
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /people:
+    get:
+      tags:
+        - people
+      summary: New Request Copy
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /people/{getPeopleId}:
+    get:
+      tags:
+        - people
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: getPeopleId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /people/{deletePeopleId}:
+    delete:
+      tags:
+        - people
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: deletePeopleId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /people/:
+    post:
+      tags:
+        - people
+      summary: New Request Copy
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                fields:
+                  name: Random Name
+                  height: Random Height
+                  mass: Random Mass
+                  hair_color: Random Hair Color
+                  skin_color: Random Skin Color
+                  eye_color: Random Eye Color
+                  birth_year: Random Birth Year
+                  gender: Random Gender
+                  films: []
+                  url: null
+                  created: null
+                  edited: null
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /people/{patchPeopleId}:
+    patch:
+      tags:
+        - people
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: patchPeopleId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                fields:
+                  name: Updated Name
+                  height: Updated Height
+                  mass: Updated Mass
+                  hair_color: Updated Hair Color
+                  skin_color: Updated Skin Color
+                  eye_color: Updated Eye Color
+                  birth_year: Updated Birth Year
+                  gender: Updated Gender
+                  films: []
+                  url: null
+                  created: null
+                  edited: null
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /planets:
+    get:
+      tags:
+        - planets
+      summary: New Request Copy
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - planets
+      summary: New Request Copy
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                fields:
+                  name: Random Name
+                  diameter: Random Diameter
+                  rotation_period: Random Rotation Period
+                  orbital_period: Random Orbital Period
+                  gravity: Random Gravity
+                  population: Random Population
+                  climate: Random Climate
+                  terrain: Random Terrain
+                  surface_water: Random Surface Water
+                  films: []
+                  residents: []
+                  url: null
+                  created: null
+                  edited: null
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /planets/{PlanetsId}:
+    get:
+      tags:
+        - planets
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: PlanetsId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - planets
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: PlanetsId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /planets/{patchPlanetsId}:
+    patch:
+      tags:
+        - planets
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: patchPlanetsId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                fields:
+                  name: Updated Name
+                  diameter: Updated Diameter
+                  rotation_period: Updated Rotation Period
+                  orbital_period: Updated Orbital Period
+                  gravity: Updated Gravity
+                  population: Updated Population
+                  climate: Updated Climate
+                  terrain: Updated Terrain
+                  surface_water: Updated Surface Water
+                  films: []
+                  residents: []
+                  url: null
+                  created: null
+                  edited: null
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /species:
+    get:
+      tags:
+        - species
+      summary: New Request Copy
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - species
+      summary: New Request Copy
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                fields:
+                  name: Random Name
+                  classification: Random Classification
+                  designation: Random Designation
+                  average_height: Random Average Height
+                  average_lifespan: Random Average Lifespan
+                  hair_colors: Random Hair Colors
+                  skin_colors: Random Skin Colors
+                  eye_colors: Random Eye Colors
+                  homeworld: 6359028b87edb1fadea12388
+                  language: Random Language
+                  people: []
+                  films: []
+                  url: Random URL
+                  created: null
+                  edited: null
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /species/{getSpeciesId}:
+    get:
+      tags:
+        - species
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: getSpeciesId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /species/{deleteSpeciesId}:
+    delete:
+      tags:
+        - species
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: deleteSpeciesId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /species/{patchSpeciesId}:
+    patch:
+      tags:
+        - species
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: patchSpeciesId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                fields:
+                  name: Updated Name
+                  classification: Updated Classification
+                  designation: Updated Designation
+                  average_height: Updated Average Height
+                  average_lifespan: Updated Average Lifespan
+                  hair_colors: Updated Hair Colors
+                  skin_colors: Updated Skin Colors
+                  eye_colors: Updated Eye Colors
+                  homeworld: 6359028b87edb1fadea12388
+                  language: Updated Language
+                  people: []
+                  films: []
+                  url: Updated URL
+                  created: null
+                  edited: null
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /starships:
+    get:
+      tags:
+        - starships
+      summary: New Request Copy
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - starships
+      summary: New Request Copy
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                fields:
+                  name: Death Star
+                  model: DS-1 Orbital Battle Station
+                  starship_class: Deep Space Mobile Battlestation
+                  manufacturer: >-
+                    Imperial Department of Military Research, Sienar Fleet
+                    Systems
+                  cost_in_credits: '1000000000000'
+                  length: '120000'
+                  crew: '342953'
+                  passengers: '843342'
+                  max_atmosphering_speed: n/a
+                  hyperdrive_rating: '4.0'
+                  MGLT: 10 MGLT
+                  cargo_capacity: '1000000000000'
+                  consumables: 3 years
+                  films:
+                    - 6359021a87edb1fadea10d7d
+                  pilots: []
+                  url: '9'
+                  created: '2014-12-10T16:36:50.509Z'
+                  edited: '2014-12-10T16:36:50.509Z'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /starships/{getStarshipId}:
+    get:
+      tags:
+        - starships
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: getStarshipId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /starships/{deleteStarshipId}:
+    delete:
+      tags:
+        - starships
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: deleteStarshipId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /starships/{patchStarshipsId}:
+    patch:
+      tags:
+        - starships
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: patchStarshipsId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                fields:
+                  name: Updated Starship Name
+                  model: Updated Model
+                  starship_class: Updated Starship Class
+                  manufacturer: Updated Manufacturer
+                  cost_in_credits: '12345'
+                  length: '9876'
+                  crew: '100'
+                  passengers: '50'
+                  max_atmosphering_speed: '1000'
+                  hyperdrive_rating: '5.0'
+                  MGLT: 15 MGLT
+                  cargo_capacity: '50000'
+                  consumables: 1 month
+                  films: []
+                  pilots: []
+                  url: https
+                  created: '2023-06-28T12:00:00Z'
+                  edited: '2023-06-28T12:00:00Z'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /vehicles:
+    get:
+      tags:
+        - vehicles
+      summary: New Request Copy
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - vehicles
+      summary: New Request Copy
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                fields:
+                  name: New Vehicle
+                  model: Random Model
+                  vehicle_class: Random Vehicle Class
+                  manufacturer: Random Manufacturer
+                  cost_in_credits: '5000'
+                  length: '100'
+                  crew: '5'
+                  passengers: '2'
+                  max_atmosphering_speed: '500'
+                  cargo_capacity: '1000'
+                  consumables: 1 week
+                  films: []
+                  pilots: []
+                  url: https
+                  created: '2023-06-28T12:00:00Z'
+                  edited: '2023-06-28T12:00:00Z'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /vehicles/{getVehicleId}:
+    get:
+      tags:
+        - vehicles
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: getVehicleId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /vehicles/{deleteVehicleId}:
+    delete:
+      tags:
+        - vehicles
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: deleteVehicleId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /vehicles/{patchVehicleId}:
+    patch:
+      tags:
+        - vehicles
+      summary: New Request Copy
+      parameters:
+        - in: path
+          name: patchVehicleId
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                fields:
+                  name: Updated Vehicle Name
+                  model: Updated Model
+                  vehicle_class: Updated Vehicle Class
+                  manufacturer: Updated Manufacturer
+                  cost_in_credits: '10000'
+                  length: '150'
+                  crew: '8'
+                  passengers: '4'
+                  max_atmosphering_speed: '800'
+                  cargo_capacity: '2000'
+                  consumables: 2 weeks
+                  films: []
+                  pilots: []
+                  url: https://swapi.dev/api/vehicles/123/
+                  created: '2023-06-28T12:00:00Z'
+                  edited: '2023-06-28T12:00:00Z'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
